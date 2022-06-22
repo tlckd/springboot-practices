@@ -1,18 +1,18 @@
-package ex01;
+package ex04;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.ComponentScan;
 
-@Configuration
+/*
+ * SpringBootApplication 메타 어노테이션 여러기능 합쳐서 가지고 있는거 
+ * 
+ * @SpringBootConfiguration + @ComponentScan							
+ */
+@SpringBootConfiguration
 public class MyApplication {
-	
-	@Bean
-	public MyComponent myComponent() {
-		return new MyComponent();
-	}
-	
 	
 	public static void main(String[] args) {
 		try(ConfigurableApplicationContext c = SpringApplication.run(MyApplication.class, args)) {}
